@@ -1,24 +1,26 @@
 import board
 from kmk.kmk_keyboard import KMKKeyboard as _KMKKeyboard
 from kmk.scanners import DiodeOrientation
+# from kmk.quickpin.pro_micro.nice_nano import pinout as pins
+from kmk.quickpin.pro_micro.sparkfun_promicro_rp2040 import pinout as pins
 
 class KMKKeyboard(_KMKKeyboard):
     col_pins = (
-        board.D9,
-        board.D8,
-        board.D7,
-        board.D6,
-        board.D5,
+        pins[11],
+        pins[10],
+        pins[9],
+        pins[8],
+        pins[7],
     )
     row_pins = (
-        board.D29,
-        board.D28,
-        board.D27,
-        board.D26,
-        board.D22,
-        board.D20,
-        board.D23,
-        board.D21,
+        pins[19],
+        pins[18],
+        pins[17],
+        pins[16],
+        pins[15],
+        pins[14],
+        pins[13],
+        pins[12],
     )
     diode_orientation = DiodeOrientation.COL2ROW
     # flake8: noqa
